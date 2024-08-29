@@ -1,0 +1,22 @@
+/* globalStyle.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+h1, h2, h3, h4 {
+    color: #9bb1ff; /* Light blue for headings */
+}
+
+a {
+    color: #9bb1ff; /* Light blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #b0c4ff; /* Lighter blue on hover */
+}

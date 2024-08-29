@@ -1,0 +1,60 @@
+/* homeStyle.css */
+#home {
+    text-align: center;
+    padding: 50px;
+    background: #2c2c2c; /* Dark background for section */
+    color: #e0e0e0;
+    border-radius: 10px;
+}
+
+#home h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #9bb1ff; /* Light blue */
+}
+
+#home p {
+    font-size: 1.5em;
+    color: #b0c4ff; /* Lighter blue */
+}
+
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #2c2c2c; /* Dark background for button */
+    background-color: #9bb1ff; /* Light blue */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #b0c4ff; /* Lighter blue on hover */
+    color: #1a1a1a;
+}
+
+.projects {
+    margin-top: 50px;
+}
+
+.project {
+    background-color: #333333; /* Slightly lighter dark background */
+    color: #e0e0e0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #9bb1ff; /* Light blue */
+}
+
+.project p {
+    color: #b0c4ff; /* Lighter blue */
+}
