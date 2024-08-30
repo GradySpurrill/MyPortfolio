@@ -1,0 +1,165 @@
+/* Global styles in style.css */
+
+/* General body and container styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #261A23; /* Dark background for the body */
+  color: #e6e6e6; /* Light text color */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+  overflow-y: scroll; /* Ensure scrolling is always available */
+  position: relative; /* Ensure absolute children are positioned correctly */
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  position: relative; /* Position relative to contain the hover effect */
+}
+
+/* Sidebar styling */
+.sidebar {
+  position: fixed; /* Make the sidebar fixed */
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px; /* Adjust width as needed */
+  background-color: #261A23; /* Dark background for sidebar */
+  padding-top: 20px;
+  padding-left: 20px; /* Adjust padding to make space for content */
+  padding-right: 20px; /* Add padding to ensure text does not touch the edge */
+  color: #e6e6e6; /* Ensuring text color is consistent */
+  box-sizing: border-box; /* Include padding in width calculations */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-header h1 {
+  font-size: 2.8em; /* Larger font size for the name */
+  font-weight: bold; /* Keep the text bold */
+  margin-bottom: 10px;
+  color: #e6e6e6; /* Matching the sidebar text color */
+}
+
+.sidebar-header h2 {
+  font-size: 1.5em; /* Smaller font size for the title */
+  font-weight: normal; /* Regular weight for subtitle */
+  color: #e6e6e6; /* Slightly different color for distinction */
+  margin: 0 0 10px 0; /* Margin to provide spacing */
+}
+
+.sidebar-header p {
+  font-size: 1em; /* Smallest font size for the description */
+  color: #b6b6b6; /* Matching the sidebar text color */
+  margin: 0;
+  font-weight: normal; /* Make sure the description is not bold */
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Stack the links vertically */
+  align-items: center;
+}
+
+.sidebar-links li {
+  margin: 20px 0; /* Add space between each link */
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: #A7F2E4; /* Light blue color */
+  font-size: 1.5em; /* Make the font size larger */
+  transition: color 0.3s ease;
+}
+
+.sidebar-links a:hover {
+  color: #3c6e65; /* Darker green on hover */
+}
+
+/* Mouse hover effect that blends with the background */
+.mouse-hover-effect {
+  position: absolute; /* Position relative to the app container */
+  width: 350px; /* Size of the hover effect area */
+  height: 350px;
+  border-radius: 50%; /* Circular shape */
+  pointer-events: none; /* Allows clicking through the effect */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 80%);
+  transition: background 0.2s ease; /* Smooth transition for the effect */
+  z-index: 10; /* Ensure it is below the sidebar but above the background */
+  mix-blend-mode: lighten; /* Ensures it only affects the background color */
+}
+
+/* Main content styling */
+.main-content {
+  margin-left: 300px; /* Match this with the sidebar width */
+  padding: 20px;
+  width: calc(100% - 300px); /* Adjusts based on sidebar width */
+  background-color: #261A23; /* Match main content background with body background */
+  color: #e6e6e6; /* Ensure main content text color matches body text color */
+  overflow-y: auto; /* Only allow vertical scrolling */
+  height: 100vh; /* Full height */
+  padding-left: 20px; /* Add some padding for content */
+  position: relative; /* Position relative to contain the hover effect */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  #home, #projects {
+    max-width: 90%; /* Adjust width for smaller screens */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  #home h1, #projects h2 {
+    font-size: 2em; /* Reduce heading size */
+  }
+
+  #home p, #projects p {
+    font-size: 1em; /* Reduce paragraph font size */
+  }
+
+  .sidebar {
+    width: 200px; /* Adjust sidebar width for smaller screens */
+  }
+
+  .main-content {
+    margin-left: 200px; /* Adjust to match sidebar width */
+    width: calc(100% - 200px); /* Adjust main content width */
+  }
+}
+
+@media (max-width: 480px) {
+  #home, #projects {
+    max-width: 95%; /* Further adjust width for very small screens */
+    padding: 10px; /* Further reduce padding */
+  }
+
+  #home h1, #projects h2 {
+    font-size: 1.8em; /* Further reduce heading size */
+  }
+
+  #home p, #projects p {
+    font-size: 0.9em; /* Further reduce paragraph font size */
+  }
+
+  .sidebar {
+    width: 150px; /* Further adjust sidebar width for smaller screens */
+  }
+
+  .main-content {
+    margin-left: 150px; /* Adjust to match sidebar width */
+    width: calc(100% - 150px); /* Adjust main content width */
+  }
+}

@@ -1,0 +1,34 @@
+#contact {
+    text-align: center;
+    padding: 50px;
+    background: #261a23; /* Match the background color with the rest of your page */
+    color: #e6e6e6;
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 600px; /* Limit width to keep it centered */
+  }
+  
+  #contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #e6e6e6; /* Keep consistent text color */
+  }
+  
+  .contact-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #261a23; /* Button text color */
+    background-color: #a7f2e4; /* Button background color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .contact-button:hover {
+    background-color: #3c6e65; /* Darker background on hover */
+    color: #261a23; /* Text color on hover */
+  }
+  

@@ -1,0 +1,57 @@
+/* projectStyle.css */
+
+/* Projects section styling */
+#projects {
+    position: relative; /* Ensure that child absolute elements are positioned relative to this parent */
+    padding: 20px;
+    margin: 50px auto; /* Center it horizontally and add top/bottom margin */
+    background: #261a23; /* Initial background color */
+    color: #e6e6e6; /* Text color */
+    text-align: center;
+    max-width: 80%; /* Limit the width to prevent overflow on smaller screens */
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+}
+
+#projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #e6e6e6; /* Light blue color */
+}
+
+#projects p {
+    font-size: 1.2em;
+    color: #a7f2e4; /* Lighter blue */
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive styles for projects section */
+@media (max-width: 768px) {
+    #projects {
+        max-width: 90%; /* Adjust width for smaller screens */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    #projects h2 {
+        font-size: 2em; /* Reduce heading size */
+    }
+
+    #projects p {
+        font-size: 1em; /* Reduce paragraph font size */
+    }
+}
+
+@media (max-width: 480px) {
+    #projects {
+        max-width: 95%; /* Further adjust width for very small screens */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    #projects h2 {
+        font-size: 1.8em; /* Further reduce heading size */
+    }
+
+    #projects p {
+        font-size: 0.9em; /* Further reduce paragraph font size */
+    }
+}

@@ -1,22 +1,81 @@
-/* globalStyle.css */
+/* Global styles in style.css */
+
+/* General body and container styling */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #1a1a1a; /* Dark background */
-    color: #e0e0e0; /* Light text color */
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #261a23; /* Dark background for the body */
+  color: #e6e6e6; /* Light text color */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+  overflow-y: scroll; /* Ensure scrolling is always available */
+  position: relative; /* Ensure absolute children are positioned correctly */
 }
 
-h1, h2, h3, h4 {
-    color: #9bb1ff; /* Light blue for headings */
+.app-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  position: relative; /* Position relative to contain the hover effect */
 }
 
-a {
-    color: #9bb1ff; /* Light blue for links */
-    text-decoration: none;
+.mouse-hover-effect {
+  position: fixed; /* Cover the entire viewport */
+  width: 350px; /* Size of the hover effect area */
+  height: 350px;
+  border-radius: 50%; /* Circular shape */
+  pointer-events: none; /* Allows clicking through the effect */
+  background: radial-gradient(
+    rgba(255, 255, 255, 0.03) 15%,
+    /* Lighter color at the center */ rgb(38, 26, 35) 60%
+      /* Background color at the edges with transparency */
+  );
+  transition: background 0.2s ease; /* Smooth transition for the effect */
+  z-index: 5; /* Ensure it is behind the sidebar but above the background */
+  mix-blend-mode: lighten; /* Ensures it only affects the background color */
 }
 
-a:hover {
-    color: #b0c4ff; /* Lighter blue on hover */
+/* Main content styling */
+.main-content {
+  margin-left: 250px; /* Adjust based on the sidebar width */
+  padding: 20px;
+  width: calc(100% - 250px); /* Adjusts based on sidebar width */
+  background-color: #261a23; /* Match main content background with body background */
+  color: #e6e6e6; /* Ensure main content text color matches body text color */
+  overflow-y: auto; /* Only allow vertical scrolling */
+  height: 100vh; /* Full height */
+  padding-left: 20px; /* Add some padding for content */
+  position: relative; /* Position relative to contain the hover effect */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  #home {
+    max-width: 90%; /* Adjust width for smaller screens */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  #home h1 {
+    font-size: 2em; /* Reduce heading size */
+  }
+
+  #home p {
+    font-size: 1em; /* Reduce paragraph font size */
+  }
+}
+
+@media (max-width: 480px) {
+  #home {
+    max-width: 95%; /* Further adjust width for very small screens */
+    padding: 10px; /* Further reduce padding */
+  }
+
+  #home h1 {
+    font-size: 1.8em; /* Further reduce heading size */
+  }
+
+  #home p {
+    font-size: 0.9em; /* Further reduce paragraph font size */
+  }
 }

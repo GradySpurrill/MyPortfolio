@@ -1,21 +1,12 @@
 import React from 'react';
+import './contactStyle.css';
 
 const Contact = () => {
     return (
         <section id="contact">
-            <h2>Contact</h2>
-            <form>
-                <label>Name:</label>
-                <input type="text" name="name" />
-                <br />
-                <label>Email:</label>
-                <input type="email" name="email" />
-                <br />
-                <label>Message:</label>
-                <textarea name="message"></textarea>
-                <br />
-                <button type="submit">Send</button>
-            </form>
+            
+            {/* Create a button that links to the mailto link */}
+            <a href="mailto:grady_spurrill@hotmail.com" className="contact-button">Contact</a>
         </section>
     );
 }

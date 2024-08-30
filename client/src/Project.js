@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import './projectStyle.css';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -40,9 +41,9 @@ const Projects = () => {
 
     return (
         <section id="projects">
-            <h2>Languages Used in My GitHub Projects</h2>
+            <h2>Github Project Languages</h2>
             {Object.keys(languagesData).length > 0 ? (
-                <div style={{ width: '500px', height: '500px', margin: '0 auto' }}>
+                <div style={{ width: '300px', height: '300px', margin: '0 auto' }}>
                     <Pie data={data} />
                 </div>
             ) : (

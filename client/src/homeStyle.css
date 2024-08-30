@@ -1,60 +1,74 @@
 /* homeStyle.css */
+
+/* Styles for the home section */
 #home {
-    text-align: center;
-    padding: 50px;
-    background: #2c2c2c; /* Dark background for section */
-    color: #e0e0e0;
-    border-radius: 10px;
+  text-align: center;
+  padding: 50px;
+  background: #261a23; /* Dark background for section */
+  color: #a7f2e4;
+  border-radius: 10px;
+  margin: 500px 0; /* Space out the sections */
 }
 
 #home h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: #9bb1ff; /* Light blue */
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #e6e6e6; /* Light blue */
 }
 
 #home p {
-    font-size: 1.5em;
-    color: #b0c4ff; /* Lighter blue */
+  font-size: 1.5em;
+  color: #a7f2e4; /* Lighter blue */
 }
 
+/* Button styles */
 .button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    color: #2c2c2c; /* Dark background for button */
-    background-color: #9bb1ff; /* Light blue */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: #2c2c2c; /* Dark background for button */
+  background-color: #9bb1ff; /* Light blue */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .button:hover {
-    background-color: #b0c4ff; /* Lighter blue on hover */
-    color: #1a1a1a;
+  background-color: #b0c4ff; /* Lighter blue on hover */
+  color: #1a1a1a;
 }
 
-.projects {
-    margin-top: 50px;
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  #home, #projects {
+    max-width: 90%; /* Adjust width for smaller screens */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  #home h1, #projects h2 {
+    font-size: 2em; /* Reduce heading size */
+  }
+
+  #home p, #projects p {
+    font-size: 1em; /* Reduce paragraph font size */
+  }
 }
 
-.project {
-    background-color: #333333; /* Slightly lighter dark background */
-    color: #e0e0e0;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+@media (max-width: 480px) {
+  #home, #projects {
+    max-width: 95%; /* Further adjust width for very small screens */
+    padding: 10px; /* Further reduce padding */
+  }
 
-.project h3 {
-    margin-top: 0;
-    color: #9bb1ff; /* Light blue */
-}
+  #home h1, #projects h2 {
+    font-size: 1.8em; /* Further reduce heading size */
+  }
 
-.project p {
-    color: #b0c4ff; /* Lighter blue */
+  #home p, #projects p {
+    font-size: 0.9em; /* Further reduce paragraph font size */
+  }
 }
