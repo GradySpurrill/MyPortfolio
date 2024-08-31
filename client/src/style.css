@@ -1,4 +1,4 @@
-/* Global styles in style.css */
+/* styles.css */
 
 /* General body and container styling */
 body {
@@ -13,15 +13,21 @@ body {
   position: relative; /* Ensure absolute children are positioned correctly */
 }
 
+
 .app-container {
   display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center all content horizontally */
   width: 100%;
   min-height: 100vh;
+  gap: 20px; /* Space between sidebar and main content */
+  padding: 20px; /* Add padding to ensure spacing around edges */
+  box-sizing: border-box; /* Include padding in width calculations */
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
   position: relative; /* Position relative to contain the hover effect */
 }
-
 .mouse-hover-effect {
-  position: fixed; /* Cover the entire viewport */
+  position: absolute; /* Cover the entire viewport */
   width: 350px; /* Size of the hover effect area */
   height: 350px;
   border-radius: 50%; /* Circular shape */
@@ -37,45 +43,48 @@ body {
 }
 
 /* Main content styling */
+
+/* Main content styles */
 .main-content {
-  margin-left: 250px; /* Adjust based on the sidebar width */
+  flex: 1 1 600px; /* Base width with flexibility to shrink or grow */
+  max-width: 800px; /* Set a maximum width to prevent it from growing too large */
   padding: 20px;
-  width: calc(100% - 250px); /* Adjusts based on sidebar width */
-  background-color: #261a23; /* Match main content background with body background */
-  color: #e6e6e6; /* Ensure main content text color matches body text color */
-  overflow-y: auto; /* Only allow vertical scrolling */
-  height: 100vh; /* Full height */
-  padding-left: 20px; /* Add some padding for content */
-  position: relative; /* Position relative to contain the hover effect */
+  background-color: #261A23;
+  color: #e6e6e6;
+  overflow-y: auto;
+  min-height: 100vh;
+  box-sizing: border-box; /* Include padding in width calculations */
+  margin: 0; /* Remove margin to align with the Flexbox container */
 }
 
-/* Responsive styles */
+
+
+/* Media query for medium-sized screens (like tablets) */
 @media (max-width: 768px) {
-  #home {
-    max-width: 90%; /* Adjust width for smaller screens */
-    padding: 15px; /* Reduce padding for smaller screens */
+  .app-container {
+    flex-direction: column; /* Stack sidebar above main content */
+    align-items: center; /* Center the stacked items */
+    padding: 10px; /* Reduce padding for smaller screens */
   }
 
-  #home h1 {
-    font-size: 2em; /* Reduce heading size */
-  }
-
-  #home p {
-    font-size: 1em; /* Reduce paragraph font size */
+  .main-content {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 90%; /* Slight margin on the sides */
+    margin: 0 auto; /* Center main content */
   }
 }
 
+/* Media query for screens narrower than 480px */
 @media (max-width: 480px) {
-  #home {
-    max-width: 95%; /* Further adjust width for very small screens */
-    padding: 10px; /* Further reduce padding */
+  .app-container {
+    padding: 10px; /* Further reduce padding for very small screens */
   }
 
-  #home h1 {
-    font-size: 1.8em; /* Further reduce heading size */
-  }
-
-  #home p {
-    font-size: 0.9em; /* Further reduce paragraph font size */
+  .main-content {
+    width: 100%; /* Ensure full width */
+    max-width: 90%; /* Maintain consistent layout */
+    margin: 0 auto; /* Center main content */
   }
 }
+
+

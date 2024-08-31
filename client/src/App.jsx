@@ -19,6 +19,14 @@ const App = () => {
         return () => window.removeEventListener('mousemove', handleMouseMove);
     }, []);
 
+    // Function to handle smooth scrolling
+    const scrollTo = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <Router>
             <div className="app-container">
@@ -29,12 +37,12 @@ const App = () => {
                         left: mousePosition.x - 175, // Center the effect horizontally
                     }}
                 />
-                <Sidebar />
+                {/* Update the Sidebar to pass scrollTo function */}
+                <Sidebar scrollTo={scrollTo} />
                 <main className="main-content">
                     <AboutMe />
                     <Contact />
                     <Home />
-                    
                 </main>
             </div>
         </Router>

@@ -25,7 +25,9 @@
     margin: 0;
 }
 
-/* Responsive styles for projects section */
+/* projectStyle.css */
+
+/* Responsive styles for Projects section */
 @media (max-width: 768px) {
     #projects {
         max-width: 90%; /* Adjust width for smaller screens */

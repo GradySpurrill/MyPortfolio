@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './sidebarStyle.css';  // Import your CSS file here
 
-const Sidebar = () => {
+const Sidebar = ({ scrollTo }) => {
     return (
         <aside className="sidebar">
             <div className="sidebar-header">
@@ -12,8 +11,7 @@ const Sidebar = () => {
             </div>
             <nav>
                 <ul className="sidebar-links">
-                    <li><Link to="#home">Home</Link></li>
-                    <li><Link to="#contact">Contact</Link></li>
+                    <li><a href="#about-me" onClick={(e) => { e.preventDefault(); scrollTo('about-me'); }}>About Me</a></li>
                 </ul>
             </nav>
         </aside>

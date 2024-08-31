@@ -28,7 +28,7 @@
   padding: 15px 30px;
   font-size: 1.2em;
   color: #2c2c2c; /* Dark background for button */
-  background-color: #9bb1ff; /* Light blue */
+  background-color: #e6e6e6; /* Light blue */
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -42,33 +42,38 @@
 }
 
 
-/* Responsive styles */
+
+
+/* homeStyle.css */
+
+/* Responsive styles for Home section */
 @media (max-width: 768px) {
-  #home, #projects {
+  #home {
     max-width: 90%; /* Adjust width for smaller screens */
     padding: 15px; /* Reduce padding for smaller screens */
   }
 
-  #home h1, #projects h2 {
+  #home h1 {
     font-size: 2em; /* Reduce heading size */
   }
 
-  #home p, #projects p {
+  #home p {
     font-size: 1em; /* Reduce paragraph font size */
   }
 }
 
 @media (max-width: 480px) {
-  #home, #projects {
+  #home {
     max-width: 95%; /* Further adjust width for very small screens */
     padding: 10px; /* Further reduce padding */
   }
 
-  #home h1, #projects h2 {
+  #home h1 {
     font-size: 1.8em; /* Further reduce heading size */
   }
 
-  #home p, #projects p {
+  #home p {
     font-size: 0.9em; /* Further reduce paragraph font size */
   }
 }
+
