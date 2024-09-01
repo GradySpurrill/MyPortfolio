@@ -1,5 +1,7 @@
 import React from 'react';
-import './sidebarStyle.css';  // Import your CSS file here
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import './sidebarStyle.css';
+import Contact from './Contact'; // Import the Contact component
 
 const Sidebar = ({ scrollTo }) => {
     return (
@@ -12,8 +14,22 @@ const Sidebar = ({ scrollTo }) => {
             <nav>
                 <ul className="sidebar-links">
                     <li><a href="#about-me" onClick={(e) => { e.preventDefault(); scrollTo('about-me'); }}>About Me</a></li>
+                    <li><a href="#projects" onClick={(e) => { e.preventDefault(); scrollTo('projects'); }}>Projects</a></li>
                 </ul>
             </nav>
+
+            {/* Add Contact Component to the Sidebar */}
+            <Contact />
+
+            {/* Social media icons */}
+            <div className="sidebar-social-icons">
+                <a href="https://github.com/MushysWebs" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/grady-spurrill/" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-linkedin"></i>
+                </a>
+            </div>
         </aside>
     );
 };

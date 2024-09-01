@@ -1,0 +1,3 @@
+add mr maybe,
+change side bar so its position stays and doesnt move off screen
+change when side bar stacks on top of main content

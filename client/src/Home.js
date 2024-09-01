@@ -4,7 +4,7 @@ import Project from './Project';
 
 const Home = () => {
     return (
-        <section id="home">
+        <section id="projects" className="project-section">
             <Project/>
         </section>
     );

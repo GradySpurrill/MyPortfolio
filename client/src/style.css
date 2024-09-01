@@ -20,7 +20,7 @@ body {
   justify-content: center; /* Center all content horizontally */
   width: 100%;
   min-height: 100vh;
-  gap: 20px; /* Space between sidebar and main content */
+  gap: 80px; /* Space between sidebar and main content */
   padding: 20px; /* Add padding to ensure spacing around edges */
   box-sizing: border-box; /* Include padding in width calculations */
   flex-wrap: wrap; /* Allow content to wrap on smaller screens */
@@ -55,7 +55,9 @@ body {
   min-height: 100vh;
   box-sizing: border-box; /* Include padding in width calculations */
   margin: 0; /* Remove margin to align with the Flexbox container */
+  scroll-snap-type: y mandatory;
 }
+
 
 
 
