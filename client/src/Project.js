@@ -8,6 +8,17 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const Projects = () => {
     const [languagesData, setLanguagesData] = useState({});
+    const [projects, setProjects] = useState([
+        {
+            title: "Village Tech",
+            description: "Capstone project creating a POS system for a veterinary clinic.",
+            technologies: "React, Node.js, Express, PostgreSQL",
+            info: "Currently still a work in progress. Sign in with the following credentials: Username: test@email.com Password: password",
+            link: "https://github.com/yourusername/project-one"
+        },
+
+        // Add more projects as needed
+    ]);
 
     useEffect(() => {
         const fetchLanguages = async () => {
@@ -49,6 +60,18 @@ const Projects = () => {
             ) : (
                 <p>Loading languages data...</p>
             )}
+
+            {/* New Section for Project Links */}
+            <div className="project-list">
+                {projects.map((project, index) => (
+                    <div key={index} className="project-card">
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                        <p className="project-technologies">Built with: {project.technologies}</p>
+                        <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
+                    </div>
+                ))}
+            </div>
         </section>
     );
 };
