@@ -4,8 +4,8 @@ import Sidebar from "./Sidebar";
 import Home from "./Home";
 import AboutMe from "./AboutMe";
 import Contact from "./Contact";
+import Divider from "./Divider";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
 import "./style.css"; // Ensure this imports your CSS
 
 const App = () => {
@@ -13,7 +13,6 @@ const App = () => {
 
   useEffect(() => {
     const handleMouseMove = (event) => {
-      // Calculate mouse position relative to the entire document, including scroll
       setMousePosition({ x: event.pageX, y: event.pageY });
     };
 
@@ -21,7 +20,6 @@ const App = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  // Function to handle smooth scrolling
   const scrollTo = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -29,22 +27,24 @@ const App = () => {
     }
   };
 
+  
+
   return (
     <Router>
       <div className="app-container">
         <div
           className="mouse-hover-effect"
           style={{
-            top: mousePosition.y - 205, // Center the effect vertically
-            left: mousePosition.x - 175, // Center the effect horizontally
+            top: mousePosition.y - 205,
+            left: mousePosition.x - 175,
           }}
         />
-        {/* Update the Sidebar to pass scrollTo function */}
         <Sidebar scrollTo={scrollTo} />
         <main className="main-content">
           <AboutMe />
-
+          <Divider />
           <Home />
+          <Divider />
         </main>
       </div>
     </Router>

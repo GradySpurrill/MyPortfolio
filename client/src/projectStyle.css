@@ -2,8 +2,9 @@
 
 /* Projects section styling */
 #projects {
+    height: 90vh;
     position: relative; /* Ensure that child absolute elements are positioned relative to this parent */
-    padding: 20px;
+    padding-top: 20px;
     margin: 50px auto; /* Center it horizontally and add top/bottom margin */
     background: #261a23; /* Initial background color */
     color: #e6e6e6; /* Text color */

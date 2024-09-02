@@ -1,0 +1,133 @@
+/* Button to open the modal (matching contact-button style) */
+.open-modal-button {
+    display: inline-block;
+    padding: 15px 30px; /* Adjust padding for a consistent size */
+    font-size: 1.2em; /* Match font size */
+    color: #261a23; /* Match button text color */
+    background-color: #a7f2e4; /* Match button background color */
+    border: none;
+    border-radius: 5px; /* Match border radius */
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    margin-top: 20px; /* Maintain top margin for spacing */
+}
+
+.open-modal-button:hover {
+    background-color: #3c6e65; /* Darker background on hover to match */
+    color: #261a23; /* Match text color on hover */
+}
+/* Hide the mouse hover effect */
+.hide-hover-effect {
+    display: none;
+}
+
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+    background-color: rgba(0, 0, 0, 0.9); /* Black with opacity */
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Start with opacity 0 */
+    transition: opacity 0.5s ease; /* Smooth fade-in transition */
+}
+
+/* Modal's visible state */
+.modal.show {
+    display: flex; /* Show the modal when it's active */
+    opacity: 1; /* Fully visible with transition */
+}
+
+/* Modal content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.4s ease; /* Smooth slide-in animation */
+}
+
+/* Animation for sliding in the modal content */
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Close button positioned slightly outside the modal */
+.close-button {
+    position: absolute;
+    top: -40px; /* Move above the modal */
+    right: 0px; /* Move to the right outside of the modal */
+    color: #aaa;
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #3f3f3f;
+    cursor: pointer;
+}
+
+/* Slideshow styles */
+.mySlides {
+    display: none;
+}
+
+img {
+    width: 100%;
+    cursor: pointer; /* Allow clicking to navigate slides */
+    transition: transform 0.3s ease; /* Smooth zoom effect on click */
+}
+
+img:active {
+    transform: scale(1.05); /* Slight zoom on click */
+}
+
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+

@@ -1,6 +1,7 @@
 /* aboutMeStyle.css */
 
 .about-me-section {
+    height: 80vh;
     padding: 20px;
     margin: 50px auto; /* Center it horizontally and add top/bottom margin */
     background: #261a23; /* Initial background color */
@@ -23,7 +24,7 @@
     font-size: 1.2em;
     color: #b6b6b6; /* Lighter blue */
     line-height: 1.5;
-    margin: 0;
+    margin: 10;
 }
 
 /* aboutMeStyle.css */
