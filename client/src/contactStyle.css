@@ -1,25 +1,25 @@
 #contact {
     text-align: center;
     padding: 50px;
-    background: #261a23; /* Match the background color with the rest of your page */
+    background: #261a23; 
     color: #e6e6e6;
     border-radius: 10px;
     margin: 50px auto;
-    max-width: 600px; /* Limit width to keep it centered */
+    max-width: 600px; 
   }
   
   #contact h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #e6e6e6; /* Keep consistent text color */
+    color: #e6e6e6; 
   }
   
   .contact-button {
     display: inline-block;
     padding: 15px 30px;
     font-size: 1.2em;
-    color: #261a23; /* Button text color */
-    background-color: #a7f2e4; /* Button background color */
+    color: #261a23; 
+    background-color: #a7f2e4;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -28,7 +28,7 @@
   }
   
   .contact-button:hover {
-    background-color: #3c6e65; /* Darker background on hover */
-    color: #261a23; /* Text color on hover */
+    background-color: #3c6e65; 
+    color: #261a23; 
   }
   

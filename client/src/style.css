@@ -1,91 +1,85 @@
-/* styles.css */
 
-/* General body and container styling */
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #261a23; /* Dark background for the body */
-  color: #e6e6e6; /* Light text color */
-  scroll-behavior: smooth; /* Enable smooth scrolling */
-  overflow-y: scroll; /* Ensure scrolling is always available */
-  position: relative; /* Ensure absolute children are positioned correctly */
+  background-color: #261a23; 
+  color: #e6e6e6; 
+  scroll-behavior: smooth; 
+  overflow-y: scroll; 
+  position: relative; 
 }
 
 
 .app-container {
   display: flex;
   flex-direction: row;
-  justify-content: center; /* Center all content horizontally */
+  justify-content: center; 
   width: 100%;
   min-height: 100vh;
-  gap: 80px; /* Space between sidebar and main content */
-  padding: 20px; /* Add padding to ensure spacing around edges */
-  box-sizing: border-box; /* Include padding in width calculations */
-  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
-  position: relative; /* Position relative to contain the hover effect */
+  gap: 80px; 
+  padding: 20px; 
+  box-sizing: border-box; 
+  flex-wrap: wrap; 
+  position: relative; 
 }
 .mouse-hover-effect {
-  position: absolute; /* Cover the entire viewport */
-  width: 350px; /* Size of the hover effect area */
+  position: absolute; 
+  width: 350px; 
   height: 350px;
-  border-radius: 50%; /* Circular shape */
-  pointer-events: none; /* Allows clicking through the effect */
+  border-radius: 50%; 
+  pointer-events: none; 
   background: radial-gradient(
     rgba(255, 255, 255, 0.03) 15%,
-    /* Lighter color at the center */ rgb(38, 26, 35) 60%
-      /* Background color at the edges with transparency */
+    rgb(38, 26, 35) 60%
+
   );
-  transition: background 0.2s ease; /* Smooth transition for the effect */
-  z-index: 5; /* Ensure it is behind the sidebar but above the background */
-  mix-blend-mode: lighten; /* Ensures it only affects the background color */
+  transition: background 0.2s ease; 
+  z-index: 5; 
+  mix-blend-mode: lighten; 
 }
 
-/* Main content styling */
 
-/* Main content styles */
+
 .main-content {
-  flex: 1 1 600px; /* Base width with flexibility to shrink or grow */
-  max-width: 800px; /* Set a maximum width to prevent it from growing too large */
+  flex: 1 1 600px; 
+  max-width: 800px; 
   padding: 20px;
   background-color: #261A23;
   color: #e6e6e6;
   overflow-y: auto;
   min-height: 100vh;
-  box-sizing: border-box; /* Include padding in width calculations */
-  margin: 0; /* Remove margin to align with the Flexbox container */
+  box-sizing: border-box; 
+  margin: 0; 
   scroll-snap-type: y mandatory;
 }
 
 
-
-
-/* Media query for medium-sized screens (like tablets) */
 @media (max-width: 768px) {
   .app-container {
-    flex-direction: column; /* Stack sidebar above main content */
-    align-items: center; /* Center the stacked items */
-    padding: 10px; /* Reduce padding for smaller screens */
+    flex-direction: column;
+    align-items: center; 
+    padding: 10px; 
   }
 
   .main-content {
-    width: 100%; /* Full width on smaller screens */
-    max-width: 90%; /* Slight margin on the sides */
-    margin: 0 auto; /* Center main content */
+    width: 100%; 
+    max-width: 90%;
+    margin: 0 auto; 
   }
 }
 
-/* Media query for screens narrower than 480px */
+
 @media (max-width: 480px) {
   .app-container {
-    padding: 10px; /* Further reduce padding for very small screens */
+    padding: 10px; 
   }
 
   .main-content {
-    width: 100%; /* Ensure full width */
-    max-width: 90%; /* Maintain consistent layout */
-    margin: 0 auto; /* Center main content */
+    width: 100%; 
+    max-width: 90%; 
+    margin: 0 auto; 
   }
 }
 

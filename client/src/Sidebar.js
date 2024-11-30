@@ -1,7 +1,7 @@
 import React from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './sidebarStyle.css';
-import Contact from './Contact'; // Import the Contact component
+import Contact from './Contact'; 
 
 const Sidebar = ({ scrollTo }) => {
     return (
@@ -18,10 +18,7 @@ const Sidebar = ({ scrollTo }) => {
                 </ul>
             </nav>
 
-            {/* Add Contact Component to the Sidebar */}
             <Contact />
-
-            {/* Social media icons */}
             <div className="sidebar-social-icons">
                 <a href="https://github.com/MushysWebs" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-github"></i>

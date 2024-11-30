@@ -6,7 +6,7 @@ import AboutMe from "./AboutMe";
 import Contact from "./Contact";
 import Divider from "./Divider";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "./style.css"; // Ensure this imports your CSS
+import "./style.css"; 
 
 const App = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });

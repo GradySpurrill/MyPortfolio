@@ -1,34 +1,19 @@
-require('dotenv').config();
-const express = require('express');
-const morgan = require('morgan');
-const cors = require('cors'); 
 const axios = require('axios');
-const app = express();
-
-app.use(morgan('dev'));
-app.use(cors()); 
-app.use(express.json());
-
 const token = process.env.GITHUB_TOKEN;
 const username = 'MushysWebs';
 
-
 async function fetchAndAggregateLanguages() {
-    const headers = {
-        'Authorization': `token ${token}`
-    };
+    const headers = { 'Authorization': `token ${token}` };
 
     try {
         const reposResponse = await axios.get(`https://api.github.com/users/${username}/repos`, { headers });
         const repos = reposResponse.data;
 
         let languagesCount = {};
-
         for (let repo of repos) {
             try {
                 const langResponse = await axios.get(repo.languages_url, { headers });
                 const repoLanguages = langResponse.data;
-
 
                 for (const [language, lines] of Object.entries(repoLanguages)) {
                     if (!languagesCount[language]) {
@@ -48,18 +33,4 @@ async function fetchAndAggregateLanguages() {
     }
 }
 
-
-app.get("/api/github/languages", async (req, res) => {
-    try {
-        const languages = await fetchAndAggregateLanguages();
-        res.json(languages);
-    } catch (err) {
-        console.log(err);
-        res.status(500).send('Failed to fetch GitHub languages data');
-    }
-});
-
-const port = process.env.PORT || 3006;
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
+module.exports = { fetchAndAggregateLanguages };

@@ -17,7 +17,7 @@ const Projects = () => {
             link: "https://github.com/yourusername/project-one"
         },
 
-        // Add more projects as needed
+
     ]);
 
     useEffect(() => {
@@ -33,7 +33,7 @@ const Projects = () => {
         fetchLanguages();
     }, []);
 
-    // Prepare data for the Pie chart
+
     const data = {
         labels: Object.keys(languagesData),
         datasets: [
@@ -61,7 +61,7 @@ const Projects = () => {
                 <p>Loading languages data...</p>
             )}
 
-            {/* New Section for Project Links */}
+
             <div className="project-list">
                 {projects.map((project, index) => (
                     <div key={index} className="project-card">

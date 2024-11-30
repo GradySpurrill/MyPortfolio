@@ -1,52 +1,51 @@
-/* Button to open the modal (matching contact-button style) */
+
 .open-modal-button {
     display: inline-block;
-    padding: 15px 30px; /* Adjust padding for a consistent size */
-    font-size: 1.2em; /* Match font size */
-    color: #261a23; /* Match button text color */
-    background-color: #a7f2e4; /* Match button background color */
+    padding: 15px 30px; 
+    font-size: 1.2em; 
+    color: #261a23; 
+    background-color: #a7f2e4; 
     border: none;
-    border-radius: 5px; /* Match border radius */
+    border-radius: 5px; 
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
-    margin-top: 20px; /* Maintain top margin for spacing */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px; 
 }
 
 .open-modal-button:hover {
-    background-color: #3c6e65; /* Darker background on hover to match */
-    color: #261a23; /* Match text color on hover */
+    background-color: #3c6e65; 
+    color: #261a23; 
 }
-/* Hide the mouse hover effect */
+
 .hide-hover-effect {
     display: none;
 }
 
 
-/* Modal styling */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Prevent scrolling */
-    background-color: rgba(0, 0, 0, 0.9); /* Black with opacity */
+    overflow: hidden; 
+    background-color: rgba(0, 0, 0, 0.9); 
     align-items: center;
     justify-content: center;
-    opacity: 0; /* Start with opacity 0 */
-    transition: opacity 0.5s ease; /* Smooth fade-in transition */
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
 }
 
-/* Modal's visible state */
+
 .modal.show {
-    display: flex; /* Show the modal when it's active */
-    opacity: 1; /* Fully visible with transition */
+    display: flex; 
+    opacity: 1; 
 }
 
-/* Modal content */
+
 .modal-content {
     position: relative;
     background-color: #fefefe;
@@ -55,10 +54,10 @@
     width: 80%;
     max-width: 700px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    animation: slideIn 0.4s ease; /* Smooth slide-in animation */
+    animation: slideIn 0.4s ease;
 }
 
-/* Animation for sliding in the modal content */
+
 @keyframes slideIn {
     from {
         transform: translateY(-30px);
@@ -70,11 +69,11 @@
     }
 }
 
-/* Close button positioned slightly outside the modal */
+
 .close-button {
     position: absolute;
-    top: -40px; /* Move above the modal */
-    right: 0px; /* Move to the right outside of the modal */
+    top: -40px; 
+    right: 0px; 
     color: #aaa;
     font-size: 40px;
     font-weight: bold;
@@ -87,22 +86,22 @@
     cursor: pointer;
 }
 
-/* Slideshow styles */
+
 .mySlides {
     display: none;
 }
 
 img {
     width: 100%;
-    cursor: pointer; /* Allow clicking to navigate slides */
-    transition: transform 0.3s ease; /* Smooth zoom effect on click */
+    cursor: pointer; 
+    transition: transform 0.3s ease; 
 }
 
 img:active {
-    transform: scale(1.05); /* Slight zoom on click */
+    transform: scale(1.05); 
 }
 
-/* Navigation buttons */
+
 .prev, .next {
     cursor: pointer;
     position: absolute;
