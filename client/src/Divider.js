@@ -1,6 +1,5 @@
 import React from 'react';
-import './dividersStyle.css'; // Import the CSS for styling
-
+import './dividersStyle.css'; 
 const Divider = () => {
   return (
     <div className="divider-container">

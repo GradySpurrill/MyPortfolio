@@ -1,31 +1,31 @@
-/* Divider container to center the line */
+
 .divider-container {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Hide the parts outside the container */
+    overflow: hidden; 
   }
   
-  /* Divider line with vine animation */
+
   .divider-line {
-    width: 0; /* Start with width 0 for the growing effect */
-    height: 4px; /* Thickness of the line */
-    background-color: #A7F2E4; /* Vine color (green) */
+    width: 0; 
+    height: 4px; 
+    background-color: #A7F2E4; 
     position: relative;
-    animation: growVine 4s ease-out forwards; /* Vine growing animation with smooth easing */
-    border-radius: 2px; /* Slight rounding of corners to resemble a vine */
+    animation: growVine 4s ease-out forwards; 
+    border-radius: 2px; 
   }
   
-  /* Keyframes for the vine growing animation */
+ 
   @keyframes growVine {
     0% {
-      width: 0; /* Start with no width */
-      transform: scaleY(1); /* Normal thickness */
+      width: 0; 
+      transform: scaleY(1); 
     }
     100% {
-      width: 100%; /* Fully grown */
-      transform: scaleY(1); /* Back to normal thickness */
+      width: 100%; 
+      transform: scaleY(1); 
     }
   }
   

@@ -1,49 +1,48 @@
-/* Projects section styling */
+
 #projects {
   height: 90vh;
-  position: relative; /* Ensure that child absolute elements are positioned relative to this parent */
-  padding-top: 20px;
-  margin: 50px auto; /* Center it horizontally and add top/bottom margin */
-  background: #261a23; /* Initial background color */
-  color: #e6e6e6; /* Text color */
+  position: relative; 
+  margin: 50px auto; 
+  background: #261a23; 
+  color: #e6e6e6; 
   text-align: center;
-  max-width: 80%; /* Limit the width to prevent overflow on smaller screens */
-  box-sizing: border-box; /* Include padding and border in element's total width/height */
+  max-width: 80%;
+  box-sizing: border-box; 
 }
 
 #projects h2 {
   font-size: 2.5em;
   margin-bottom: 15px;
-  color: #e6e6e6; /* Light blue color */
+  color: #e6e6e6; 
 }
 
 #projects p {
   font-size: 1.2em;
-  color: #e6e6e6; /* Lighter blue */
+  color: #e6e6e6; 
   line-height: 1.5;
   margin: 0;
 }
 
-/* Styling for the project list */
+
 .project-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Space between cards */
+  gap: 20px; 
   margin-top: 30px;
 }
 
-/* Styling for individual project cards */
+
 .project-card {
-  background-color: #261a23; /* Match the background color */
+  background-color: #261a23; 
   color: #e6e6e6;
   padding: 20px;
   border-radius: 8px;
   width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  transition: border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Include border in transition */
-  border: 2px solid transparent; /* Initially, no border is visible */
+  transition: border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
+  border: 2px solid transparent;
 }
 
 .project-card h3 {
@@ -70,49 +69,49 @@
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  border: 2px solid #3c6e65; /* Border appears on hover */
+  border: 2px solid #3c6e65; 
 }
 
 .project-card .project-technologies {
-  font-size: 0.7em !important; /* Force smaller text for technologies */
-  color: #a7f2e4 !important; /* Keep the color consistent */
-  margin-top: -10px; /* Slightly closer to the description */
+  font-size: 0.7em !important; 
+  color: #a7f2e4 !important; 
+  margin-top: -10px; 
 }
-/* Responsive styles for Projects section */
+
 @media (max-width: 768px) {
   #projects {
-    max-width: 90%; /* Adjust width for smaller screens */
-    padding: 15px; /* Reduce padding for smaller screens */
+    max-width: 90%; 
+    padding: 15px; 
   }
 
   #projects h2 {
-    font-size: 2em; /* Reduce heading size */
+    font-size: 2em; 
   }
 
   #projects p {
-    font-size: 1em; /* Reduce paragraph font size */
+    font-size: 1em; 
   }
 
   .project-card {
-    width: 80%; /* Adjust card width for smaller screens */
+    width: 80%; 
   }
 }
 
 @media (max-width: 480px) {
   #projects {
-    max-width: 95%; /* Further adjust width for very small screens */
-    padding: 10px; /* Further reduce padding */
+    max-width: 95%; 
+    padding: 10px; 
   }
 
   #projects h2 {
-    font-size: 1.8em; /* Further reduce heading size */
+    font-size: 1.8em; 
   }
 
   #projects p {
-    font-size: 0.9em; /* Further reduce paragraph font size */
+    font-size: 0.9em; 
   }
 
   .project-card {
-    width: 90%; /* Full width for very small screens */
+    width: 90%; 
   }
 }

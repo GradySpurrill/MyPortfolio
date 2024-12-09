@@ -5,17 +5,17 @@ const AboutMe = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [slideIndex, setSlideIndex] = useState(1);
 
-  // Function to open the modal
+
   const openModal = () => {
     setModalOpen(true);
   };
 
-  // Function to close the modal
+
   const closeModal = () => {
     setModalOpen(false);
   };
 
-  // Function to show the slides based on the current index
+
   const showSlides = (n) => {
     const slides = document.getElementsByClassName('mySlides');
     if (n > slides.length) setSlideIndex(1);
@@ -30,17 +30,17 @@ const AboutMe = () => {
     slides[slideIndex - 1].classList.add('fade');
   };
 
-  // Function to handle next/previous slide controls
+
   const plusSlides = (n) => {
     showSlides(slideIndex + n);
   };
 
-  // useEffect to show the first slide when the modal is opened
+ 
   useEffect(() => {
     if (isModalOpen) showSlides(slideIndex);
   }, [isModalOpen, slideIndex]);
 
-  // useEffect to close modal when clicking outside of the modal content
+ 
   useEffect(() => {
     const handleClickOutside = (event) => {
       const modal = document.querySelector('.modal-content');
@@ -53,7 +53,7 @@ const AboutMe = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isModalOpen]);
 
-  // useEffect to toggle the mouse hover effect
+
   useEffect(() => {
     const mouseHoverEffect = document.querySelector('.mouse-hover-effect');
     if (isModalOpen) {
@@ -67,17 +67,17 @@ const AboutMe = () => {
     <section id="about-me" className="about-me-section">
       <h2>About Me</h2>
       <p>
-      My journey in software development began in 2022 at the Southern Alberta Institute of Technology,
-       but my fascination with technology and computers has been a lifelong passion. 
-       I’m excited by the prospect of becoming a full stack developer and am constantly looking for opportunities to learn and grow,
+        My journey in software development began in 2022 at the Southern Alberta Institute of Technology,
+        but my fascination with technology and computers has been a lifelong passion.
+        I’m excited by the prospect of becoming a full stack developer and am constantly looking for opportunities to learn and grow,
         both personally and professionally.
       </p>
       <p>Aside from coding, I have a range of hobbies that help me stay balanced and motivated.
-         I enjoy listening to podcasts, going on camping trips to enjoy nature, video games or board games with friends, and spending time with my dog.
-           She's a 6-year-old rescue from the streets of Thailand who became a part of my life two years ago.</p>
+        I enjoy listening to podcasts, going on camping trips to enjoy nature, video games or board games with friends, and spending time with my dog.
+        She's a 6-year-old rescue from the streets of Thailand who became a part of my life two years ago.</p>
       <button onClick={openModal} className="open-modal-button">See My Dog</button>
 
-      {/* Modal for the slideshow */}
+
       {isModalOpen && (
         <div className={`modal ${isModalOpen ? 'show' : ''}`}>
           <div className="modal-content">
@@ -113,7 +113,7 @@ const AboutMe = () => {
               <div className="mySlides">
                 <img src="PillowDog.jpg" alt="Ponzu using her toys as a pillow" onClick={() => plusSlides(1)} />
               </div>
-              {/* Navigation buttons */}
+
               <a className="prev" onClick={() => plusSlides(-1)}>&#10094;</a>
               <a className="next" onClick={() => plusSlides(1)}>&#10095;</a>
             </div>

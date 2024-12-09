@@ -1,34 +1,32 @@
-/* homeStyle.css */
 
-/* Styles for the home section */
 #home {
   text-align: center;
   padding: 50px;
-  background: #261a23; /* Dark background for section */
+  background: #261a23;
   color: #a7f2e4;
   border-radius: 10px;
-  margin: 500px 0; /* Space out the sections */
+  margin: 500px 0; 
 }
 
 #home h1 {
   font-size: 3em;
   margin-bottom: 20px;
-  color: #e6e6e6; /* Light blue */
+  color: #e6e6e6;
 }
 
 #home p {
   font-size: 1.5em;
-  color: #a7f2e4; /* Lighter blue */
+  color: #a7f2e4; 
 }
 
-/* Button styles */
+
 .button {
   display: inline-block;
   margin-top: 30px;
   padding: 15px 30px;
   font-size: 1.2em;
-  color: #2c2c2c; /* Dark background for button */
-  background-color: #e6e6e6; /* Light blue */
+  color: #2c2c2c; 
+  background-color: #e6e6e6; 
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -37,7 +35,7 @@
 }
 
 .button:hover {
-  background-color: #b0c4ff; /* Lighter blue on hover */
+  background-color: #b0c4ff; 
   color: #1a1a1a;
 }
 
