@@ -19,6 +19,9 @@ const AboutMe = () => {
     { src: "NotScared.jpg"},
     { src: "PrettyLady.jpg"},
     { src: "PillowDog.jpg" },
+    {src: "PonzuByTheRiver.jpg"},
+    {src: "PonzuRunningFree.jpg"},
+    {src: "SmilingOnAHill.jpg"},
   ];
 
  
@@ -51,7 +54,7 @@ const AboutMe = () => {
       <p>
         Aside from coding, I have a range of hobbies that help me stay balanced and motivated.
         I enjoy listening to podcasts, going on camping trips to enjoy nature, video games or board games with friends, and spending time with my dog.
-        She's a 6-year-old rescue from the streets of Thailand who became a part of my life two years ago.
+        She's a feisty 6 year old from the streets of Thailand who came into my life two and a half years ago. I hope you enjoy the slide show of her!
       </p>
 
       {/* Slideshow Section */}
