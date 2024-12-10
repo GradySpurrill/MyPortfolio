@@ -11,7 +11,7 @@
   .divider-line {
     width: 0; 
     height: 4px; 
-    background-color: #A7F2E4; 
+    background-color: #031c31; 
     position: relative;
     animation: growVine 4s ease-out forwards; 
     border-radius: 2px; 

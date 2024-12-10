@@ -4,8 +4,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #261a23; 
-  color: #e6e6e6; 
+  background-color: #c7c7c7; 
+  color: #050505; 
   scroll-behavior: smooth; 
   overflow-y: scroll; 
   position: relative; 
@@ -15,41 +15,23 @@ body {
 .app-container {
   display: flex;
   flex-direction: row;
-  justify-content: center; 
+  justify-content: center;
   width: 100%;
-  min-height: 100vh;
-  gap: 80px; 
-  padding: 20px; 
-  box-sizing: border-box; 
-  flex-wrap: wrap; 
-  position: relative; 
+  gap: 20px; 
+  padding: 0px 20px; 
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  position: relative;
+  top: -40px;
 }
-.mouse-hover-effect {
-  position: absolute; 
-  width: 350px; 
-  height: 350px;
-  border-radius: 50%; 
-  pointer-events: none; 
-  background: radial-gradient(
-    rgba(255, 255, 255, 0.03) 15%,
-    rgb(38, 26, 35) 60%
-
-  );
-  transition: background 0.2s ease; 
-  z-index: 5; 
-  mix-blend-mode: lighten; 
-}
-
 
 
 .main-content {
   flex: 1 1 600px; 
-  max-width: 800px; 
-  padding: 20px;
-  background-color: #261A23;
+  max-width: 900px; 
+  background-color: #c7c7c7;
   color: #e6e6e6;
   overflow-y: auto;
-  min-height: 100vh;
   box-sizing: border-box; 
   margin: 0; 
   scroll-snap-type: y mandatory;
@@ -59,27 +41,48 @@ body {
 @media (max-width: 768px) {
   .app-container {
     flex-direction: column;
-    align-items: center; 
-    padding: 10px; 
+    align-items: center;
+    padding: 15px; 
   }
 
   .main-content {
-    width: 100%; 
-    max-width: 90%;
-    margin: 0 auto; 
+    width: 100%;
+    max-width: 95%; 
+    margin: 0 auto;
+    padding: 10px; 
+  }
+
+  .mouse-hover-effect {
+    width: 250px; 
+    height: 250px;
   }
 }
 
 
+
 @media (max-width: 480px) {
   .app-container {
-    padding: 10px; 
+    padding: 10px;
   }
 
   .main-content {
     width: 100%; 
-    max-width: 90%; 
+    max-width: 100%; 
     margin: 0 auto; 
+  }
+
+  .main-content {
+    overflow-y: visible; 
+    height: auto; 
+  }
+
+  .app-container {
+    flex-direction: column;
+    overflow-y: visible;
+  }
+
+  .mouse-hover-effect {
+    display: none;
   }
 }
 

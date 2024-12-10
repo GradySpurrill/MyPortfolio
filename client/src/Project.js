@@ -52,14 +52,7 @@ const Projects = () => {
 
     return (
         <section id="projects">
-            <h2>Languages from my Github projects</h2>
-            {Object.keys(languagesData).length > 0 ? (
-                <div style={{ width: '300px', height: '300px', margin: '0 auto' }}>
-                    <Pie data={data} />
-                </div>
-            ) : (
-                <p>Loading languages data...</p>
-            )}
+            <h2>Projects</h2>
 
 
             <div className="project-list">

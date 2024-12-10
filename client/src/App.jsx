@@ -42,9 +42,7 @@ const App = () => {
         <Sidebar scrollTo={scrollTo} />
         <main className="main-content">
           <AboutMe />
-          <Divider />
           <Home />
-          <Divider />
         </main>
       </div>
     </Router>
