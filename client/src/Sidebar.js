@@ -9,14 +9,12 @@ const Sidebar = ({ scrollTo }) => {
   const socialIconsRef = useRef(null);
 
   useEffect(() => {
-    // Animate the sidebar when the component mounts
     gsap.fromTo(
       sidebarRef.current,
       { x: "-100%", opacity: 0 },
       { x: "0%", opacity: 1, duration: 1, ease: "power2.out" }
     );
 
-    // Animate nav links with stagger
     gsap.fromTo(
       linksRef.current.children,
       { x: -50, opacity: 0 },
@@ -30,7 +28,6 @@ const Sidebar = ({ scrollTo }) => {
       }
     );
 
-    // Animate social icons
     gsap.fromTo(
       socialIconsRef.current.children,
       { y: 50, opacity: 0 },
@@ -51,7 +48,6 @@ const Sidebar = ({ scrollTo }) => {
         <img src="/GradyLogo.png" alt="Grady Logo" className="sidebar-logo" />
       </div>
 
-      {/* Navigation Links */}
       <nav className="nav-links">
         <ul ref={linksRef} className="sidebar-links">
           <li>
@@ -90,7 +86,6 @@ const Sidebar = ({ scrollTo }) => {
         </ul>
       </nav>
 
-      {/* Social Icons */}
       <div ref={socialIconsRef} className="sidebar-social-icons">
         <a
           href="https://github.com/MushysWebs"
