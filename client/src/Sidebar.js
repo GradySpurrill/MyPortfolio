@@ -73,15 +73,7 @@ const Sidebar = ({ scrollTo }) => {
             </a>
           </li>
           <li>
-            <a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollTo("contact");
-              }}
-            >
-              Contact
-            </a>
+            <a href="mailto:grady_spurrill@hotmail.com">Contact</a>
           </li>
         </ul>
       </nav>
