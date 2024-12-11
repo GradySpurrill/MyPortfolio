@@ -45,7 +45,7 @@ const Sidebar = ({ scrollTo }) => {
   return (
     <aside ref={sidebarRef} className="sidebar">
       <div className="sidebar-header">
-        <img src="/GradyLogo.png" alt="Grady Logo" className="sidebar-logo" />
+        <img src="/GradyLogoShadow3.png" alt="Grady Logo" className="sidebar-logo" />
       </div>
 
       <nav className="nav-links">

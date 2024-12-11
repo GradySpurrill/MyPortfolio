@@ -20,7 +20,7 @@ const AnimatedBackground = () => {
         radius: Math.random() * 2 + 1, 
         dx: Math.random() * 0.6 - 0.3, 
         dy: Math.random() * 0.6 - 0.3, 
-        opacity: Math.random() * 0.4 + 0.3, 
+        opacity: Math.random() * 0.4 + 0.2, 
       });
     }
 

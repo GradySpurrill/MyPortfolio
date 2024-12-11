@@ -52,6 +52,8 @@
   font-family: "Playfair Display", serif;
   font-weight: 500;
   position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+
 }
 
 .sidebar-links li {
@@ -201,7 +203,7 @@
     list-style: none;
     flex-direction: row;
     font-size: 0.9rem;
-  }
+    }
 
   .sidebar-links li {
     display: inline-block;
@@ -216,11 +218,6 @@
     border-radius: 5px;
     padding: 5px 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  .sidebar-links a:hover {
-    background-color: #4d7fa8;
-    color: #261a23;
   }
 
   .sidebar-header h1 {
@@ -241,6 +238,17 @@
 
   .sidebar-social-icons {
     display: none;
+  }
+
+  .sidebar-links a:hover {
+    font-size: 1.2em; 
+    color: #4d7fa8;
+    background-color: #f8af0400; 
+    z-index: auto;
+  }
+
+  .sidebar-links a:active {
+    font-size: 1.2em;
   }
 }
 
