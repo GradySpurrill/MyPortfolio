@@ -18,8 +18,7 @@ const AnimatedBackground = () => {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         radius: Math.random() * 2 + 1, 
-        dx: Math.random() * 0.6 - 0.3, 
-        dy: Math.random() * 0.6 - 0.3, 
+        dy: Math.random() * 0.3 + 0.2, 
         opacity: Math.random() * 0.4 + 0.2, 
       });
     }
@@ -36,13 +35,13 @@ const AnimatedBackground = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((particle) => {
-        particle.x += particle.dx;
         particle.y += particle.dy;
 
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.y > canvas.height) particle.y = 0;
-        if (particle.y < 0) particle.y = canvas.height;
+        
+        if (particle.y > canvas.height) {
+          particle.y = -particle.radius;
+          particle.x = Math.random() * canvas.width; 
+        }
 
         drawParticle(particle);
       });
