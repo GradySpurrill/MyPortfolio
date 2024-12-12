@@ -26,7 +26,7 @@ const Projects = () => {
       button: "Walkthrough",
       title: "Walkthrough",
       description: null,
-      video: "CapstoneWalkthrough.mp4",
+      video: "https://www.youtube.com/embed/upHm9iUPbCQ?start=2", 
     },
   ];
 
@@ -64,7 +64,7 @@ const Projects = () => {
       <h2>Project</h2>
       <div className="project-box">
         <h3 className="project-title">Village Tech</h3>
-
+  
         <div className="project-content" ref={contentRef}>
           {sections[currentIndex].image && (
             <img
@@ -74,17 +74,20 @@ const Projects = () => {
             />
           )}
           {sections[currentIndex].video && (
-            <video
+            <iframe
               className="project-video"
-              controls
               src={sections[currentIndex].video}
-            />
+              title={sections[currentIndex].title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           )}
           {sections[currentIndex].description && (
             <p>{sections[currentIndex].description}</p>
           )}
         </div>
-
+  
         <div className="navigation-buttons">
           {sections.map((section, index) => (
             <button
@@ -100,7 +103,7 @@ const Projects = () => {
         </div>
       </div>
     </section>
-  );
+  );  
 };
 
 export default Projects;
