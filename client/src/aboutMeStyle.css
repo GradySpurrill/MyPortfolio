@@ -1,8 +1,6 @@
 .about-me-section {
     height: auto; 
     margin: auto; 
-    background: #c7c7c7;
-    color: #e6e6e6;
     border-radius: 10px;
     text-align: center;
     max-width: 80%;
@@ -97,7 +95,7 @@ img:active {
     .about-me-section {
         max-width: 95%;
         padding: 10px;
-        padding-top: 50px;
+        padding-top: 120px;
         z-index: 1;
         top: 0px;
     }

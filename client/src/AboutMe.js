@@ -25,9 +25,13 @@ const AboutMe = () => {
   ];
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     gsap.fromTo(
       aboutMeRef.current.children,
-      { opacity: 0, y: 50 },
+      { opacity: 0, y: -50 },
       { opacity: 1, y: 0, duration: 2, ease: "power2.out", stagger: 0.2 }
     );
   }, []);
