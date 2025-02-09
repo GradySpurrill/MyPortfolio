@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./sidebarStyle.css";
 import { gsap } from "gsap";
 
-const Sidebar = ({ scrollTo }) => {
+const Sidebar = () => {
   const sidebarRef = useRef(null);
   const linksRef = useRef(null);
   const socialIconsRef = useRef(null);
@@ -51,29 +52,10 @@ const Sidebar = ({ scrollTo }) => {
       <nav className="nav-links">
         <ul ref={linksRef} className="sidebar-links">
           <li>
-            <a
-              href="#about-me"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollTo("about-me");
-              }}
-            >
-              About Me
-            </a>
+            <Link to="/">About Me</Link>
           </li>
           <li>
-            <a
-              href="#projects"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollTo("projects");
-              }}
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="mailto:grady_spurrill@hotmail.com">Contact</a>
+            <Link to="/projects">Projects</Link>
           </li>
         </ul>
       </nav>
