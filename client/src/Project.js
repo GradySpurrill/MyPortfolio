@@ -69,6 +69,93 @@ const projects = [
   },
   {
     id: 2,
+    name: "Pullectorverse",
+    shortDescription: "An eCommerce platform for buying Pokémon products.",
+    description: `
+    I started this project because I wanted to develop a software from to start to finish on my own. 
+    As eCommerce platforms are semi complex and provide a lot of features, I thought it would be a great learning experience.
+    As a Pokémon card collector myself, I decided to create an eCommerce platform for Pokémon products. Although it's currently Pokémon themed, the platform can be easily adapted for any other merchandise.
+    I wanted to learn 3js so I decided to implement a 3js homepage, I understand this is probably not necessary for an eCommerce platform but I wanted to learn it. Before loading the 3D homepage, 
+    the system checks if WebGL is enabled and assesses potential performance issues. If WebGL is unsupported or performance concerns are detected, users are automatically redirected to the store page.
+    `,
+    technologies: [
+      "Vite",
+      "React.js",
+      "React Router",
+      "Three.js",
+      "GSAP",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "Auth0",
+      "Google Authentication",
+      "Stripe API",
+      "PayPal SDK",
+      "Vercel",
+      "Render",
+      "GitHub Actions",
+      "AWS S3",
+    ],
+    image: "pullectorverse.png",
+    video: "https://foliobuck.s3.us-east-2.amazonaws.com/PVWalk.mp4",
+    features: [
+      {
+        title: "3D Product Viewer",
+        description:
+          "Integrated Three.js for interactive Pokémon merchandise models, allowing users to rotate, zoom, and inspect cards in full 3D.",
+      },
+      {
+        title: "Smooth Animations & Page Transitions",
+        description:
+          "GSAP ensures seamless animations across UI elements, enhancing the user experience with smooth transitions.",
+      },
+      {
+        title: "Real-time Shopping Cart",
+        description:
+          "Built using React’s Context API, the shopping cart updates in real-time, giving users a seamless checkout experience.",
+      },
+      {
+        title: "Secure Authentication with Google",
+        description:
+          "Users can log in using Google OAuth for quick and secure access to their accounts.",
+      },
+      {
+        title: "Multiple Payment Options",
+        description:
+          "Supports both Stripe for credit card payments and PayPal for alternative payment methods.",
+      },
+      {
+        title: "Search & Filtering System",
+        description:
+          "Advanced search and filtering options allow users to find products based on category, price, and availability.",
+      },
+      {
+        title: "Wishlist & User Favorites",
+        description:
+          "Users can save and manage a list of their favorite cards and merchandise for easy access.",
+      },
+      {
+        title: "Admin Dashboard for Inventory Management",
+        description:
+          "Backend system for admins to add, update, and remove products dynamically, keeping stock information up to date.",
+      },
+      {
+        title: "Automated Email Confirmations & Receipts",
+        description:
+          "Users receive order confirmations and digital receipts via email, ensuring a smooth transaction experience.",
+      },
+      {
+        title: "Dark Mode & Theme Customization",
+        description:
+          "Personalized UI themes, including dark mode, implemented using React Context API.",
+      },
+    ],
+  },
+
+  {
+    id: 3,
     name: "Maybe An Adventure",
     shortDescription: "A pixel-art platformer featuring a dimension-hopping monkey.",
     description: `
@@ -87,26 +174,47 @@ const projects = [
     video: "https://foliobuck.s3.us-east-2.amazonaws.com/MaybeAnAdventure.mp4",
     features: [
       {
-        title: "Game Engine & Mechanics",
+        title: "Built in Unity",
         description:
-          "Developed within Unity, using its event system, scene management, and physics engine to create smooth platforming mechanics.",
+          "Made from scratch using Unity’s 2D tools. Learned how to manage scenes, handle collisions, and work with the physics system.",
       },
       {
-        title: "Character Controller",
+        title: "Character Movement & Controls",
         description:
-          "Designed and implemented responsive movement, including smooth jumps, double jumps, and wall slides, all fine-tuned using Unity's physics system.",
+          "Created a platformer movement system with jumping, double jumps, and wall sliding. Spent time fine-tuning movement to feel smooth and responsive.",
       },
       {
-        title: "Animation & State Machines",
+        title: "Pixel Art & Animation",
         description:
-          "Used Unity’s Animator to create dynamic character animations and fluid transitions between different player actions.",
+          "Drew and animated all the sprite assets in Aseprite. Used Unity’s Animator to handle transitions between different actions like running, jumping, and idle states.",
       },
       {
-        title: "Custom Assets & Level Design",
+        title: "Level Design & Parallax Backgrounds",
         description:
-          "Created pixel-art assets using Aseprite and designed parallax backgrounds and visual effects in Photoshop to enhance immersion.",
+          "Designed levels with different art styles and mechanics. Used Photoshop to create layered parallax backgrounds for depth.",
+      },
+      {
+        title: "Camera & Cinematics",
+        description:
+          "Implemented Cinemachine to create smooth camera movement, follow the player, and add zoom effects for cinematic moments.",
+      },
+      {
+        title: "npc Interactions",
+        description:
+          "Added simple npc chat and interactions. Receive quests and rewards that help on your journey. ",
+      },
+      {
+        title: "Game State & UI",
+        description:
+          "Built menus, HUD elements, and pause screens. Managed health, checkpoints, and level progression.",
+      },
+      {
+        title: "Sound & Effects",
+        description:
+          "Added sound effects and background music. Used Unity’s audio system to trigger sounds based on player actions.",
       },
     ],
+    
   },
 ];
 
