@@ -67,6 +67,47 @@ const projects = [
       }
     ]    
   },
+  {
+    id: 2,
+    name: "Maybe An Adventure",
+    shortDescription: "A pixel-art platformer featuring a dimension-hopping monkey.",
+    description: `
+    A pixel-art platformer where players guide a monkey through different dimensions, each with its own unique art style and game mechanics. 
+    Developed entirely in Unity’s 2D environment, I built this game from the ground up, creating custom pixel art, animations, and platforming mechanics. 
+    The project allowed me to explore Unity's physics system, animation tools, and component-based architecture while refining my game development skills.
+    `,
+    technologies: [
+      "Unity",
+      "C#",
+      "Aseprite",
+      "Cinemachine",
+      "Photoshop",
+    ],
+    image: "maybeAnAdventure.png",
+    video: "https://foliobuck.s3.us-east-2.amazonaws.com/MaybeAnAdventure.mp4",
+    features: [
+      {
+        title: "Game Engine & Mechanics",
+        description:
+          "Developed within Unity, using its event system, scene management, and physics engine to create smooth platforming mechanics.",
+      },
+      {
+        title: "Character Controller",
+        description:
+          "Designed and implemented responsive movement, including smooth jumps, double jumps, and wall slides, all fine-tuned using Unity's physics system.",
+      },
+      {
+        title: "Animation & State Machines",
+        description:
+          "Used Unity’s Animator to create dynamic character animations and fluid transitions between different player actions.",
+      },
+      {
+        title: "Custom Assets & Level Design",
+        description:
+          "Created pixel-art assets using Aseprite and designed parallax backgrounds and visual effects in Photoshop to enhance immersion.",
+      },
+    ],
+  },
 ];
 
 const Projects = () => {

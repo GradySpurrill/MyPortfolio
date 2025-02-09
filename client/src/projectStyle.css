@@ -109,7 +109,6 @@
   width: 100%;
 }
 
-
 .modal-left {
   flex: 1;
   max-width: 55%;
@@ -172,7 +171,6 @@
   margin-top: -50px;
 }
 
-/* Shrinks cards to fit all 8 in one section */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
@@ -181,7 +179,6 @@
 
 
 }
-
 
 .feature-card {
   background: rgba(255, 255, 255, 0.05);
