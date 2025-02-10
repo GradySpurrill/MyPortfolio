@@ -3,73 +3,10 @@ import { gsap } from "gsap";
 import "./projectStyle.css";
 
 const projects = [
+
   {
     id: 1,
-    name: "Village Tech",
-    shortDescription: "A full-stack veterinary practice management system.",
-    description:
-    `
-    For my capstone project at SAIT, I led the development of a practice management system for a woman-owned veterinary clinic to simplify daily operations. 
-    The system handled patient records, appointment scheduling, real-time staff communication, and secure payment processing.
-    I worked on both the front-end and back-end, designing the database, setting up API routes, and building features to make the system easy to use. 
-    I integrated Stripe for payments and SendGrid for automated email receipts, along with generating PDF receipts for transactions. 
-    This project gave me hands-on experience in full-stack development while also strengthening my project management and problem-solving skills.
-    `,
-    technologies: [
-      "React.js",
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "Supabase",
-      "Stripe API",
-      "SendGrid",
-      "PDF Generation",
-      "Material-UI",
-      "WebSocket",
-      "REST API",
-      "Github",
-    ],
-    
-    image: "SnallerHorse.png",
-    video: "https://foliobuck.s3.us-east-2.amazonaws.com/VillageTechWalkThrough.mp4",
-    features: [
-      {
-        "title": "Practice Management System",
-        "description": "A complete veterinary clinic management system that streamlines daily operations, from handling patient records to managing appointments and billing."
-      },
-      {
-        "title": "Secure Payment Processing",
-        "description": "Integrated Stripe for processing payments with automated receipts, generated using SendGrid and PDF generation."
-      },
-      {
-        "title": "Scheduling Client Appointments",
-        "description": "Allows staff to schedule appointments easily, with automated reminders sent to clients to reduce no-shows."
-      },
-      {
-        "title": "Pet and Owner Management",
-        "description": "Stores detailed pet and owner profiles, including medical history, vaccinations, prescriptions, and appointment tracking."
-      },
-      {
-        "title": "Real-time Communication",
-        "description": "Uses WebSockets for instant messaging between staff members, making coordination quick and seamless."
-      },
-      {
-        "title": "User-Friendly UI",
-        "description": "Designed with a clean, intuitive interface that makes navigation simple and ensures a smooth user experience."
-      },
-      {
-        "title": "Automated Financial & End-of-Day Reports",
-        "description": "Generates financial summaries and end-of-day reports automatically, helping the clinic track revenue and daily operations."
-      },
-      {
-        "title": "Authentication & Admin Controls",
-        "description": "Includes authentication and role-based access control to ensure only authorized staff can access admin features."
-      }
-    ]    
-  },
-  {
-    id: 2,
-    name: "Pullectorverse",
+    name: "Pullectorverse (Currently in development)",
     shortDescription: "An eCommerce platform for buying Pokémon products.",
     description: `
     I started this project because I wanted to develop a software from to start to finish on my own. 
@@ -153,6 +90,72 @@ const projects = [
       },
     ],
   },
+
+  {
+    id: 2,
+    name: "Village Tech",
+    shortDescription: "A full-stack veterinary practice management system.",
+    description:
+    `
+    For my capstone project at SAIT, I led the development of a practice management system for a woman-owned veterinary clinic to simplify daily operations. 
+    The system handled patient records, appointment scheduling, real-time staff communication, and secure payment processing.
+    I worked on both the front-end and back-end, designing the database, setting up API routes, and building features to make the system easy to use. 
+    I integrated Stripe for payments and SendGrid for automated email receipts, along with generating PDF receipts for transactions. 
+    This project gave me hands-on experience in full-stack development while also strengthening my project management and problem-solving skills.
+    `,
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Supabase",
+      "Stripe API",
+      "SendGrid",
+      "PDF Generation",
+      "Material-UI",
+      "WebSocket",
+      "REST API",
+      "Github",
+    ],
+    
+    image: "SnallerHorse.png",
+    video: "https://foliobuck.s3.us-east-2.amazonaws.com/VillageTechWalkThrough.mp4",
+    features: [
+      {
+        "title": "Practice Management System",
+        "description": "A complete veterinary clinic management system that streamlines daily operations, from handling patient records to managing appointments and billing."
+      },
+      {
+        "title": "Secure Payment Processing",
+        "description": "Integrated Stripe for processing payments with automated receipts, generated using SendGrid and PDF generation."
+      },
+      {
+        "title": "Scheduling Client Appointments",
+        "description": "Allows staff to schedule appointments easily, with automated reminders sent to clients to reduce no-shows."
+      },
+      {
+        "title": "Pet and Owner Management",
+        "description": "Stores detailed pet and owner profiles, including medical history, vaccinations, prescriptions, and appointment tracking."
+      },
+      {
+        "title": "Real-time Communication",
+        "description": "Uses WebSockets for instant messaging between staff members, making coordination quick and seamless."
+      },
+      {
+        "title": "User-Friendly UI",
+        "description": "Designed with a clean, intuitive interface that makes navigation simple and ensures a smooth user experience."
+      },
+      {
+        "title": "Automated Financial & End-of-Day Reports",
+        "description": "Generates financial summaries and end-of-day reports automatically, helping the clinic track revenue and daily operations."
+      },
+      {
+        "title": "Authentication & Admin Controls",
+        "description": "Includes authentication and role-based access control to ensure only authorized staff can access admin features."
+      }
+    ]    
+  },
+
 
   {
     id: 3,
