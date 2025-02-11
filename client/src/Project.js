@@ -6,7 +6,7 @@ const projects = [
 
   {
     id: 1,
-    name: "Pullectorverse (Currently in development)",
+    name: "Pullectorverse (In development)",
     shortDescription: "An eCommerce platform for buying Pokémon products.",
     description: `
     I started this project because I wanted to develop a software from to start to finish on my own. 
