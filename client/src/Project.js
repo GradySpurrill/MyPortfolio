@@ -7,7 +7,6 @@ const projects = [
   {
     id: 1,
     name: "Pullectorverse (In development)",
-    shortDescription: "An eCommerce platform for buying Pokémon products.",
     description: `
     I started this project because I wanted to develop a software from to start to finish on my own. 
     As eCommerce platforms are semi complex and provide a lot of features, I thought it would be a great learning experience.
@@ -94,7 +93,6 @@ const projects = [
   {
     id: 2,
     name: "Village Tech",
-    shortDescription: "A full-stack veterinary practice management system.",
     description:
     `
     For my capstone project at SAIT, I led the development of a practice management system for a woman-owned veterinary clinic to simplify daily operations. 
@@ -160,7 +158,6 @@ const projects = [
   {
     id: 3,
     name: "Maybe An Adventure",
-    shortDescription: "A pixel-art platformer featuring a dimension-hopping monkey.",
     description: `
     A pixel-art platformer where players guide a monkey through different dimensions, each with its own unique art style and game mechanics. 
     Developed entirely in Unity’s 2D environment, I built this game from the ground up, creating custom pixel art, animations, and platforming mechanics. 
@@ -296,7 +293,6 @@ const Projects = () => {
 
             <div className="modal-header">
               <h1>{selectedProject.name}</h1>
-              <p className="project-type">Full-stack Management System</p>
             </div>
 
             <div className="modal-content">

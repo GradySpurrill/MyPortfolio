@@ -72,14 +72,16 @@ img:active {
     transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 940px) {
     .about-me-section {
         max-width: 90%;
-        padding: 15px;
+
+        margin-top: 0px;
     }
 
     .about-me-section h2 {
-        font-size: 2em;
+        font-size: 4em;
+        margin-bottom:10px;
     }
 
     .about-me-section p {
@@ -88,7 +90,15 @@ img:active {
     }
 
     .slideshow-container {
-        height: 300px; 
+        height: 350px; 
+        margin-top: 20px; 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 940px) {
+    .about-me-section {
+        padding-top: 40px;
+        overflow-y: hidden;
     }
 }
 
@@ -104,6 +114,7 @@ img:active {
     .about-me-section h2 {
         font-size: 2.8em;
         padding-bottom: 20px;
+        margin-top: 0px;
     }
 
     .about-me-section p {

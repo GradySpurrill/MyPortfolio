@@ -4,7 +4,7 @@ import "./aboutMeStyle.css";
 
 const AboutMe = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 940);
   const slideshowRef = useRef(null);
   const aboutMeRef = useRef(null);
 
@@ -46,7 +46,7 @@ const AboutMe = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 940);
     };
 
     window.addEventListener("resize", handleResize);

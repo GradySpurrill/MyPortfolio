@@ -83,6 +83,7 @@
   text-align: left;
   width: 100%;
   margin-bottom: 15px;
+  margin-top: -20px;
 }
 
 .modal-header h1 {
@@ -130,8 +131,9 @@
   padding-bottom: 56.25%; 
   border-radius: 10px;
   background: #000;
-  top: -100px;
+  top: -75px;
   z-index: 10;
+
 }
 
 .video-container video {
@@ -228,64 +230,86 @@
   font-weight: bold;
 }
 
-
-/* Adjust modal for extra-large screens */
-@media (min-width: 1800px) {
+@media (min-width: 1020px) and (max-width: 1540px) {
   .modal-fullscreen {
-    max-width: 1500px;
-    height: 85vh;
-    padding: 50px;
-  }
-}
-
-/* Medium Screens (767px - 1020px) - Video top + technologies below */
-@media (min-width: 767px) and (max-width: 1020px) {
-  .modal-content {
-    flex-direction: column !important;
-    gap: 0 !important;
-  }
-
-  .modal-right {
-    order: -1;
-    width: 100%;
-    margin-bottom: 0;
-    padding-bottom: 30px;
-  }
-
-  .modal-left {
-    order: 2;
-    width: 100%;
-    padding-right: 0;
-  }
-
-  .tech-stack {
-    margin-top: 30px;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .video-container {
-    top: 0;
-    margin-top: 0;
-    padding-bottom: 50%;
+    top: 0px !important;
   }
 
-  /* Ensure content remains scrollable */
-  .modal-fullscreen {
-    overflow-y: auto;
-  }
-  
   .features-section {
-    position: relative;
-    z-index: 2;
+    margin-top: 20px !important;
   }
 }
 
-/* Mobile Layout (Up to 767px) - Stacked vertical layout */
+
+@media (min-width: 768px) and (max-width: 1020px) {
+  .modal-content {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "video desc-title"
+      "tech  desc-title";
+    gap: 20px;
+    padding-bottom: 40px;
+  }
+
+  .modal-fullscreen {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .modal-left {
+    display: contents;
+  }
+
+  .modal-right {
+    display: contents !important;
+    max-width: 100% !important;
+  }
+
+  .video-container {
+    grid-area: video;
+    width: 95% !important;
+    max-width: 100% !important;
+    max-height: auto; 
+    position: relative !important;
+    top: 0 !important;         
+    margin-top: 0 !important;
+    padding-bottom: 56.25% !important; 
+  }
+
+  .modal-left .section-title {
+    grid-area: desc-title;
+    margin: 0;
+    align-self: start;
+  }
+  .modal-left .overview {
+    grid-area: desc-title; 
+    max-width: 100%;
+    margin-top: 10px;
+    align-self: start;
+  }
+
+  .modal-left .tech-stack {
+    grid-area: tech;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 940px) {
+  .projects-section h2 {
+    font-size: 5em;
+    padding-top: 100px;
+  }
+}
 @media (max-width: 767px) {
   .projects-section h2 {
     font-size: 3.5em;
-    margin-top: -30px;
+    margin-top: -120px;
   }
 
   .project-banner {
@@ -319,8 +343,7 @@
 
   .video-container {
     order: 1;
-    margin: 20px 0;
-    padding-bottom: 56.25%;
+    margin-bottom: 30px;
     top: 0;
   }
 
@@ -331,7 +354,8 @@
 
   .tech-stack {
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   .features-section {
@@ -352,8 +376,6 @@
     right: 20px;
   }
 }
-
-/* Small Mobile Screens */
 @media (max-width: 480px) {
   .projects-section h2 {
     font-size: 3em;
